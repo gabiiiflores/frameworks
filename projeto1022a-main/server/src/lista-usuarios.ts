@@ -28,7 +28,7 @@ class ListaUsuarios{
                 user: process.env.DB_USUARIO,
                 database: process.env.DB_BANCO,
             });
-            const [rows, filds] = await connection.query("SELECT * from usuarios");
+            const [rows, fields] = await connection.query("SELECT * from usuarios");
             const dados = rows as UsuarioRowDataPacket[]
             const usuariosDoBanco:Output[] = []
             for( let linha of dados){
