@@ -24,7 +24,7 @@ class ListaProdutos{
                 user: process.env.DB_USUARIO,
                 database: process.env.DB_BANCO,
             });
-            const [rows, filds] = await connection.query("SELECT * from produtos");
+            const [rows, fields] = await connection.query("SELECT * from produtos");
             const dados = rows as ProdutoRowDataPacket[]
             const produtosDoBanco:Output[] = []
             for( let linha of dados){
